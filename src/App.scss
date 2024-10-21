@@ -1,0 +1,881 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background: #1d1e23 !important;
+}
+* {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease !important;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+body {
+  overflow-x: hidden !important;
+  -webkit-user-drag: none !important;
+  -moz-drag-over: none !important;
+  scroll-behavior: smooth;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+}
+.bgs {
+  background: radial-gradient(#333, #000);
+}
+
+.shadow_top {
+  /* box-shadow: 0 -4px 35px -1px rgba(226, 180, 70), 0 -2px 4px -2px rgba(226, 180, 70); */
+  box-shadow: 0 -5px 35px rgba(226, 180, 70);
+}
+
+.react-multiple-carousel__arrow {
+  position: absolute !important;
+  top: 15%;
+  background: none !important;
+}
+
+/* styles.css */
+/* .custom-scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #272a2f;
+} */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0px !important;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #394047;
+  border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #4b5563;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .my-element__class--style {
+  width: 20%;
+} */
+
+.section {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.leaf {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.leaf div {
+  position: absolute;
+  display: block;
+}
+.leaf div:nth-child(1) {
+  left: 20%;
+  animation: fall 15s linear infinite;
+  animation-delay: -2s;
+}
+.leaf div:nth-child(2) {
+  left: 70%;
+  animation: fall 15s linear infinite;
+  animation-delay: -4s;
+}
+.leaf div:nth-child(3) {
+  left: 40%;
+  animation: fall 20s linear infinite;
+  animation-delay: -7s;
+}
+.leaf div:nth-child(4) {
+  left: 95%;
+  animation: fall 18s linear infinite;
+  animation-delay: -5s;
+}
+.leaf div:nth-child(5) {
+  left: 15%;
+  animation: fall 14s linear infinite;
+  animation-delay: -5s;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    top: -10%;
+    transform: translateX (20px) rotate(0deg);
+  }
+  20% {
+    opacity: 0.8;
+    transform: translateX (-20px) rotate(45deg);
+  }
+  40% {
+    transform: translateX (-20px) rotate(90deg);
+  }
+  60% {
+    transform: translateX (-20px) rotate(135deg);
+  }
+  80% {
+    transform: translateX (20px) rotate(180deg);
+  }
+  100% {
+    top: 110%;
+    transform: translateX (20px) rotate(225deg);
+  }
+}
+.leaf1 {
+  transform: rotateX(180deg);
+}
+
+.mybtn {
+  font-size: 1.5rem;
+  padding: 0.3em 2em;
+  background-color: #000;
+  border: 3px solid #e2b446;
+  display: block;
+  border-radius: 0.2em;
+  color: #fff;
+  font-weight: bolder;
+  transition: cubic-bezier(0.48, -0.55, 0.265, 1.55) 0.4s;
+  box-shadow: -2px 5px 0px 0px #e2b446;
+}
+
+.mybtn:hover {
+  transform: translate(-5px, -5px);
+}
+
+.loader {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+}
+
+.loader div {
+  width: 8%;
+  height: 24%;
+  background: #fdfdfd;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  opacity: 0;
+  border-radius: 50px;
+  box-shadow: 0 0 3px #f5f3f2;
+  animation: fade458 1s linear infinite;
+}
+
+@keyframes fade458 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.25;
+  }
+}
+
+.loader .bar1 {
+  transform: rotate(0deg) translate(0, -130%);
+  animation-delay: 0s;
+}
+
+.loader .bar2 {
+  transform: rotate(30deg) translate(0, -130%);
+  animation-delay: -1.1s;
+}
+
+.loader .bar3 {
+  transform: rotate(60deg) translate(0, -130%);
+  animation-delay: -1s;
+}
+
+.loader .bar4 {
+  transform: rotate(90deg) translate(0, -130%);
+  animation-delay: -0.9s;
+}
+
+.loader .bar5 {
+  transform: rotate(120deg) translate(0, -130%);
+  animation-delay: -0.8s;
+}
+
+.loader .bar6 {
+  transform: rotate(150deg) translate(0, -130%);
+  animation-delay: -0.7s;
+}
+
+.loader .bar7 {
+  transform: rotate(180deg) translate(0, -130%);
+  animation-delay: -0.6s;
+}
+
+.loader .bar8 {
+  transform: rotate(210deg) translate(0, -130%);
+  animation-delay: -0.5s;
+}
+
+.loader .bar9 {
+  transform: rotate(240deg) translate(0, -130%);
+  animation-delay: -0.4s;
+}
+
+.loader .bar10 {
+  transform: rotate(270deg) translate(0, -130%);
+  animation-delay: -0.3s;
+}
+
+.loader .bar11 {
+  transform: rotate(300deg) translate(0, -130%);
+  animation-delay: -0.2s;
+}
+
+.loader .bar12 {
+  transform: rotate(330deg) translate(0, -130%);
+  animation-delay: -0.1s;
+}
+
+.media {
+  position: relative;
+  width: 100%;
+  /*  choose your size */
+}
+
+.media a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #313638;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+.media a:nth-child(1):hover {
+  background-color: #000000;
+}
+
+.media a:nth-child(2):hover {
+  background-color: #55acee;
+}
+
+.media a:nth-child(3):hover {
+  background-color: #cd242b;
+}
+
+.media a:nth-child(4):hover {
+  background-color: #cd242b;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 14px;
+  text-shadow: 1px 1px 3px #000;
+}
+.txt {
+  font-family: "Roboto Condensed", sans-serif;
+}
+@keyframes backgroundPing {
+  0% {
+    background-position: center;
+    box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    background-position: top;
+    box-shadow: 0 0 30px 10px rgba(255, 215, 0, 1);
+  }
+  100% {
+    background-position: center;
+    box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.5);
+  }
+}
+
+.background-animate {
+  animation: backgroundPing 2s infinite;
+}
+.shad {
+  box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.5);
+}
+
+@keyframes coin {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(0px, -170px);
+  }
+}
+
+.coin {
+  animation: 2s coin infinite both;
+}
+@media only screen and (max-width: 600px) {
+  @keyframes coin {
+    0% {
+      transform: translate(0px);
+    }
+    100% {
+      transform: translate(0px, -240px);
+    }
+  }
+}
+
+@keyframes coin1 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(0px, -170px);
+  }
+}
+
+.coin1 {
+  animation: 2s coin1 infinite both;
+}
+@media only screen and (max-width: 600px) {
+  @keyframes coin1 {
+    0% {
+      transform: translate(0px);
+    }
+    100% {
+      transform: translate(0px, -240px);
+    }
+  }
+}
+
+@keyframes coin2 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(0px, -170px);
+  }
+}
+
+.coin2 {
+  animation: 2s coin2 infinite both;
+}
+@media only screen and (max-width: 600px) {
+  @keyframes coin2 {
+    0% {
+      transform: translate(0px);
+    }
+    100% {
+      transform: translate(0px, -240px);
+    }
+  }
+}
+
+// -------------
+
+@keyframes coin3 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(0px, -120px);
+  }
+}
+
+.coin3 {
+  animation: 2s coin3 infinite both;
+}
+@media only screen and (max-width: 600px) {
+  @keyframes coin3 {
+    0% {
+      transform: translate(0px);
+    }
+    100% {
+      transform: translate(0px, -150px);
+    }
+  }
+}
+
+// -------------
+
+@keyframes coin4 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(0px, -100px);
+  }
+}
+
+.coin4 {
+  animation: 2s coin4 infinite both;
+}
+@media only screen and (max-width: 600px) {
+  @keyframes coin4 {
+    0% {
+      transform: translate(0px);
+    }
+    100% {
+      transform: translate(0px, -120px);
+    }
+  }
+}
+
+// -------------
+
+@keyframes coin5 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(0px, -100px);
+  }
+}
+
+.coin4 {
+  animation: 2s coin4 infinite both;
+}
+@media only screen and (max-width: 600px) {
+  @keyframes coin4 {
+    0% {
+      transform: translate(0px);
+    }
+    100% {
+      transform: translate(0px, -120px);
+    }
+  }
+}
+.wallet {
+  border-radius: 5px !important;
+}
+.sh {
+  -webkit-box-shadow: 1px 0 32px 12px rgba(226, 180, 70);
+  -moz-box-shadow: 1px 0 32px 12px rgba(226, 180, 70);
+  box-shadow: 1px 0 32px 12px rgba(226, 180, 70);
+}
+.modal-shadow {
+  -webkit-box-shadow: 0 -5.5px 10px 0 rgba(226, 180, 70);
+  -moz-box-shadow: 0 -5.5px 10px 0 rgba(226, 180, 70);
+  box-shadow: 0px -5.5px 10px 0 rgba(226, 180, 70);
+}
+
+.cssbuttons-io-button {
+  background: rgba(226, 180, 70);
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em rgba(226, 180, 70);
+  overflow: hidden;
+
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em rgba(226, 180, 70);
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: rgba(226, 180, 70);
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+/* From Uiverse.io by Galahhad */
+/* tooltip settings 👇 */
+
+.copy {
+  /* button */
+  --button-bg: rgba(226, 180, 70);
+  --button-hover-bg: #464646;
+  --button-text-color: #cccccc;
+  --button-hover-text-color: rgba(226, 180, 70);
+  --button-border-radius: 10px;
+  --button-diameter: 46px;
+  --button-outline-width: 1px;
+  --button-outline-color: rgb(141, 141, 141);
+  /* tooltip */
+  --tooltip-bg: #f4f3f3;
+  --toolptip-border-radius: 4px;
+  --tooltip-font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+  --tooltip-font-size: 12px;
+  /* 👆 this field should not be empty */
+  --tootip-text-color: rgb(50, 50, 50);
+  --tooltip-padding-x: 7px;
+  --tooltip-padding-y: 7px;
+  --tooltip-offset: 8px;
+  /* --tooltip-transition-duration: 0.3s; */
+  /* 👆 if you need a transition, 
+  just remove the comment,
+  but I didn't like the transition :| */
+}
+
+.copy {
+  box-sizing: border-box;
+  width: var(--button-diameter);
+  height: var(--button-diameter);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  visibility: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font: var(--tooltip-font-size) var(--tooltip-font-family);
+  color: var(--tootip-text-color);
+  background: var(--tooltip-bg);
+  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  border-radius: var(--toolptip-border-radius);
+  pointer-events: none;
+  transition: all var(--tooltip-transition-duration)
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+  content: attr(data-text-initial);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+  width: var(--tooltip-padding-y);
+  height: var(--tooltip-padding-y);
+  background: inherit;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -999;
+  pointer-events: none;
+}
+
+.copy svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkmark {
+  display: none;
+}
+
+/* actions */
+
+.copy:hover .tooltip,
+.copy:focus:not(:focus-visible) .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.copy:focus:not(:focus-visible) .tooltip::before {
+  content: attr(data-text-end);
+}
+
+.copy:focus:not(:focus-visible) .clipboard {
+  display: none;
+}
+
+.copy:focus:not(:focus-visible) .checkmark {
+  display: block;
+}
+
+.copy:hover,
+.copy:focus {
+  background-color: var(--button-hover-bg);
+}
+
+.copy:active {
+  outline: var(--button-outline-width) solid var(--button-outline-color);
+}
+
+.copy:hover svg {
+  color: var(--button-hover-text-color);
+}
+
+.spin {
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  margin: auto;
+  padding: 0.5em 2.5em 0.5em 2.5em;
+  border: none;
+  background: rgba(226, 180, 70);
+  transition: all 0.1s linear;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+}
+
+.spin:active {
+  transform: scale(0.95);
+}
+
+.spin span {
+  color: #000000;
+}
+
+.spin .borders {
+  position: absolute;
+  border: 0.15em solid #fff;
+  transition: all 0.3s 0.08s linear;
+  top: 50%;
+  left: 50%;
+  width: 9em;
+  height: 2em;
+  transform: translate(-50%, -50%);
+}
+
+.spin:hover .borders {
+  border: 0.15em solid rgba(226, 180, 70);
+
+  display: block;
+  width: 9.3em;
+  height: 3.1em;
+}
+
+.full-rounded {
+  border-radius: 2em;
+}
+
+.timer small {
+  text-align: center;
+  font-weight: 300 !important;
+  font-size: 11px !important;
+  color: #ffffff !important;
+}
+.timer strong {
+  text-align: center;
+
+  color: #ffffff;
+  font-size: 38px !important;
+}
+@media only screen and (max-width: 600px) {
+  .timer {
+    width: 100% !important;
+  }
+  .timer small {
+    font-weight: 300 !important;
+    font-size: 9px !important;
+  }
+  .timer strong {
+    font-size: 29px !important;
+  }
+}
+// =============================================
+.game-board {
+  margin: auto;
+  position: relative;
+  width: calc(20 * 15px); /* COLS * cell size */
+  height: calc(20 * 15px); /* ROWS * cell size */
+  border: 2px solid rgba(226, 180, 70);
+  box-shadow: rgba(226, 179, 70, 0.267) 0 15px 30px -5px;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.rows {
+  display: flex; /* Ensure cells in a row are laid out in a row */
+}
+
+.cell {
+  width: 15px;
+  height: 15px;
+  border-radius: 25%;
+  // border: 1px solid rgba(226, 180, 70);
+}
+
+.snake {
+  background: url("/talktom.png") no-repeat center;
+  box-shadow: rgba(226, 179, 70, 0.61) 0 15px 30px -5px;
+  background-size: 100% 100%;
+}
+
+.food {
+  background: url("/talktom.png") no-repeat center;
+  box-shadow: rgba(226, 179, 70, 0.61) 0 15px 30px -5px;
+  background-size: 100% 100%;
+}
+
+.dialog {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  color: #f8f8f8;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  z-index: 999;
+}
+
+.reset {
+  margin-top: 10%;
+}
+
+.loader1 {
+  width: 12em;
+  height: 1em;
+  border-radius: 8px;
+  background-color: #e2b34623;
+}
+
+.loader1 div {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #e2b446;
+  animation: width7435 5s linear infinite;
+  transition: all;
+}
+
+@keyframes width7435 {
+  from {
+    /*width: 0;*/
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* From Uiverse.io by Satwinder04 */
+.loader3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bars {
+  width: 10px;
+  height: 20px;
+  margin: 0 2px;
+  border-radius: 4px;
+  animation: loader3 3s ease-in-out infinite;
+}
+
+.bar1 {
+  background-color: #e2b446;
+  animation-delay: -0.8s;
+}
+
+.bar2 {
+  background-color: #e2b446;
+  animation-delay: -0.7s;
+}
+
+.bar3 {
+  background-color: #e2b446;
+  animation-delay: -0.6s;
+}
+
+.bar4 {
+  background-color: #e2b446;
+  animation-delay: -0.5s;
+}
+
+.bar5 {
+  background-color: #e2b446;
+  animation-delay: -0.4s;
+}
+
+.bar6 {
+  background-color: #e2b446;
+  animation-delay: -0.3s;
+}
+
+.bar7 {
+  background-color: #e2b446;
+  animation-delay: -0.2s;
+}
+
+.bar8 {
+  background-color: #e2b446;
+  animation-delay: -0.1s;
+}
+
+.bar9 {
+  background-color: #e2b446;
+  animation-delay: 0s;
+}
+
+.bar10 {
+  background-color: #e2b446;
+  animation-delay: 0.1s;
+}
+
+@keyframes loader3 {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1, 2.32);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
